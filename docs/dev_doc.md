@@ -1,24 +1,24 @@
 JAVA-PHARMACY/
-├── app/                          # Contains the main application entry point
-│   └── PharmacyApp.java
+├── app/
+│   └── PharmacyApp.java             # Entry point with main() method
 │
-├── docs/                         # Documentation files
-│   ├── dev_doc.md                # Development documentation
-│   ├── user_doc.md               # User documentation
-│   └── placeholder.md            # Placeholder or template (can be removed later)
+├── docs/
+│   ├── dev_doc.md                   # Development documentation
+│   ├── placeholder.md              # Placeholder file (safe to remove later)
+│   └── user_doc.md                  # User instructions
 │
-├── models/                       # Core data model classes
+├── models/                          # Core entity models
 │   ├── Doctor.java
 │   ├── Medication.java
 │   ├── Patient.java
 │   ├── Person.java
-│   └── Prescriptions.java
+│   └── Prescription.java
 │
-├── system/                       # System logic controller
-│   └── MedicationTrackingSystem.java
+├── system/
+│   └── MedicationTrackingSystem.java  # Manages system-wide logic and data
 │
-├── .gitignore                    # Git configuration
-└── README.md                     # Project overview (optional custom readme)
+├── .gitignore
+└── README.md                         # Project overview for GitHub
 
 --------------------------------------------------------------------------------------
 
