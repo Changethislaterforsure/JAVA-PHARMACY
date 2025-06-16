@@ -18,7 +18,7 @@ JAVA-PHARMACY/
 │   └── MedicationTrackingSystem.java  # Manages system-wide logic and data
 │
 ├── .gitignore
-└── README.md                        
+└── README.md                         # Project overview for GitHub
 
 --------------------------------------------------------------------------------------
 
@@ -100,4 +100,6 @@ On top of this doc all classes include javadoc comments with one at the top expl
 
 ### Git
 This project uses Git, making use of commits and commit messages to keep an online repository so that even if my computer explodes, is stolen or eaten by a werewolf the work completed is not lost. 
+
+
 
