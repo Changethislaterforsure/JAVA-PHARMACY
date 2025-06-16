@@ -18,7 +18,7 @@ JAVA-PHARMACY/
 │   └── MedicationTrackingSystem.java  # Manages system-wide logic and data
 │
 ├── .gitignore
-└── README.md                         # Project overview for GitHub
+└── README.md                        
 
 --------------------------------------------------------------------------------------
 
