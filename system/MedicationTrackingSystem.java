@@ -98,6 +98,23 @@ public Prescription acceptPrescription(String doctorName, String patientName, St
     System.out.println("Prescription accepted and recorded successfully.");
     return prescription;
 }
+public boolean editPatient(String id, String newName, int newAge, String newPhone) {
+    for (Patient patient : patients) {
+        if (patient.getId().equals(id)) {
+            patient.setName(newName);
+            patient.setAge(newAge);
+            patient.setPhoneNumber(newPhone);
+            System.out.println("Patient updated.");
+            return true;
+        }
+    }
+    System.out.println("Patient not found.");
+    return false;
+}
+
+public boolean deletePatient(String id) {
+    return patients.removeIf(patient -> patient.getId().equals(id));
+}
 
     // ---------- GETTERS ----------
 
