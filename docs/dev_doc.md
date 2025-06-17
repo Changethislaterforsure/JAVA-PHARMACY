@@ -103,3 +103,6 @@ This project uses Git, making use of commits and commit messages to keep an onli
 
 
 
+## Compiling
+Since I have just compiled part of this project for the first time in order to test it I thought now would be a good time to check off that part of the documentation. To compile this project I ran javac */*.java inside the bash terminal, javac is the java compiler that rounds up the .java code and turns it into .class files that can actually be read. The */*.java part of my command is technically 2 parts, the first * tells my compiler to target all folders in my directory and *.java tells it to scoop all java files inside those folders. Now that .class files exist for my project I go back to my bash terminal and enter java app.PharmacyApp     which runs my app, which as of writing this adds a prescription to the system. 
+
