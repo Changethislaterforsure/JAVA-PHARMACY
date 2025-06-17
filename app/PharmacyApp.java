@@ -5,28 +5,44 @@ import system.MedicationTrackingSystem;
 
 public class PharmacyApp {
     public static void main(String[] args) {
-        // Step 1: Create the system
         MedicationTrackingSystem system = new MedicationTrackingSystem();
 
-        // Step 2: Create test data
+        // Create sample data
         Doctor doctor = new Doctor("D001", "Dr. Smith", 45, "555-1234", "Cardiology");
         Patient patient = new Patient("P001", "John Doe", 30, "555-5678");
         Medication med = new Medication("M001", "Atorvastatin", "20mg", 50);
 
-        // Step 3: Add to system
+        // Add to system
         system.addDoctor(doctor);
         system.addPatient(patient);
         system.addMedication(med);
 
-        // Step 4: Accept a prescription
-        Prescription prescription = system.acceptPrescription("Dr. Smith", "John Doe", "Atorvastatin");
+        // --- BEFORE EDIT ---
+        System.out.println("\nBefore Edits:");
+        System.out.println(doctor);
+        System.out.println(patient);
+        System.out.println(med);
 
-        // Step 5: Print the result
-        if (prescription != null) {
-            System.out.println("\nPrescription created:");
-            System.out.println(prescription);
-        } else {
-            System.out.println("Prescription failed.");
-        }
+        // --- EDIT ---
+        system.editDoctor("D001", "Dr. Emily Smith", 46, "555-9876", "Neurology");
+        system.editPatient("P001", "Jonathan Doe", 31, "555-0000");
+        system.editMedication("M001", "Lipitor", "40mg", 100);
+
+        // --- AFTER EDIT ---
+        System.out.println("\nAfter Edits:");
+        System.out.println(system.searchDoctorByName("Dr. Emily Smith"));
+        System.out.println(system.searchPatientByName("Jonathan Doe"));
+        System.out.println(system.searchMedicationByName("Lipitor"));
+
+        // --- DELETE ---
+        system.deleteDoctor("D001");
+        system.deletePatient("P001");
+        system.deleteMedication("M001");
+
+        // --- CONFIRM DELETION ---
+        System.out.println("\nAfter Deletion:");
+        System.out.println("Doctor found? " + (system.searchDoctorByName("Dr. Emily Smith") != null));
+        System.out.println("Patient found? " + (system.searchPatientByName("Jonathan Doe") != null));
+        System.out.println("Medication found? " + (system.searchMedicationByName("Lipitor") != null));
     }
 }
