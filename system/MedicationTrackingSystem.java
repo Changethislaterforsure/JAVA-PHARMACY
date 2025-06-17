@@ -133,6 +133,23 @@ public boolean editDoctor(String id, String newName, int newAge, String newPhone
 public boolean deleteDoctor(String id) {
     return doctors.removeIf(doctor -> doctor.getId().equals(id));
 }
+public boolean editMedication(String id, String newName, String newDose, int newStock) {
+    for (Medication med : medications) {
+        if (med.getId().equals(id)) {
+            med.setName(newName);
+            med.setDose(newDose);
+            med.setQuantityInStock(newStock);
+            System.out.println("Medication updated.");
+            return true;
+        }
+    }
+    System.out.println("Medication not found.");
+    return false;
+}
+
+public boolean deleteMedication(String id) {
+    return medications.removeIf(med -> med.getId().equals(id));
+}
 
     // ---------- GETTERS ----------
 
