@@ -115,6 +115,24 @@ public boolean editPatient(String id, String newName, int newAge, String newPhon
 public boolean deletePatient(String id) {
     return patients.removeIf(patient -> patient.getId().equals(id));
 }
+public boolean editDoctor(String id, String newName, int newAge, String newPhone, String newSpecialization) {
+    for (Doctor doctor : doctors) {
+        if (doctor.getId().equals(id)) {
+            doctor.setName(newName);
+            doctor.setAge(newAge);
+            doctor.setPhoneNumber(newPhone);
+            doctor.setSpecialization(newSpecialization);
+            System.out.println("Doctor updated.");
+            return true;
+        }
+    }
+    System.out.println("Doctor not found.");
+    return false;
+}
+
+public boolean deleteDoctor(String id) {
+    return doctors.removeIf(doctor -> doctor.getId().equals(id));
+}
 
     // ---------- GETTERS ----------
 
