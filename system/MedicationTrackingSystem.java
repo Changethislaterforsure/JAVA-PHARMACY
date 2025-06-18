@@ -150,6 +150,24 @@ public boolean editMedication(String id, String newName, String newDose, int new
 public boolean deleteMedication(String id) {
     return medications.removeIf(med -> med.getId().equals(id));
 }
+/**
+ * Prints a report of all expired medications in the system.
+ */
+public void generateExpiredMedicationsReport() {
+    System.out.println("\n--- Expired Medications Report ---");
+    boolean found = false;
+
+    for (Medication med : medications) {
+        if (med.isExpired()) {
+            System.out.println(med);
+            found = true;
+        }
+    }
+
+    if (!found) {
+        System.out.println("No expired medications found.");
+    }
+}
 
     // ---------- GETTERS ----------
 
