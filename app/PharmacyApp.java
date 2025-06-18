@@ -44,5 +44,15 @@ public class PharmacyApp {
         System.out.println("Doctor found? " + (system.searchDoctorByName("Dr. Emily Smith") != null));
         System.out.println("Patient found? " + (system.searchPatientByName("Jonathan Doe") != null));
         System.out.println("Medication found? " + (system.searchMedicationByName("Lipitor") != null));
+
+
+        // --- ADD AN EXPIRED MEDICATION ---
+Medication expiredMed = new Medication("M002", "Old Antibiotic", "250mg", 10);
+expiredMed.setExpiryDate(java.time.LocalDate.now().minusDays(30)); // force it to be expired
+system.addMedication(expiredMed);
+
+// --- EXPIRED MEDS REPORT ---
+system.generateExpiredMedicationsReport();
     }
+  
 }
