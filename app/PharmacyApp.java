@@ -53,6 +53,20 @@ system.addMedication(expiredMed);
 
 // --- EXPIRED MEDS REPORT ---
 system.generateExpiredMedicationsReport();
+
+// Issue another prescription to test
+Doctor newDoc = new Doctor("D002", "Dr. Jones", 50, "555-2222", "Oncology");
+Patient newPatient = new Patient("P002", "Sarah Lee", 28, "555-4444");
+Medication newMed = new Medication("M003", "Tamoxifen", "10mg", 40);
+
+system.addDoctor(newDoc);
+system.addPatient(newPatient);
+system.addMedication(newMed);
+
+system.acceptPrescription("Dr. Jones", "Sarah Lee", "Tamoxifen");
+
+// Generate report
+system.printPrescriptionsByDoctor("Dr. Jones");
     }
   
 }
