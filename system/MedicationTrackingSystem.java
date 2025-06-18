@@ -168,6 +168,26 @@ public void generateExpiredMedicationsReport() {
         System.out.println("No expired medications found.");
     }
 }
+/**
+ * Prints all prescriptions issued by a specific doctor.
+ *
+ * @param doctorName the name of the doctor to search for
+ */
+public void printPrescriptionsByDoctor(String doctorName) {
+    System.out.println("\n--- Prescriptions Issued by Dr. " + doctorName + " ---");
+    boolean found = false;
+
+    for (Prescription p : prescriptions) {
+        if (p.getDoctor().getName().equalsIgnoreCase(doctorName)) {
+            System.out.println(p);
+            found = true;
+        }
+    }
+
+    if (!found) {
+        System.out.println("No prescriptions found for that doctor.");
+    }
+}
 
     // ---------- GETTERS ----------
 
