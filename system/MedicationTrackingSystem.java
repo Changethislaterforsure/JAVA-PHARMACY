@@ -218,6 +218,20 @@ public void printPatientPrescriptionSummary(String patientName) {
     }
 }
 
+/**
+ * Restocks all medications to a fixed stock level.
+ *
+ * @param targetQuantity the desired stock level to reset to
+ */
+public void restockMedicationsToLevel(int targetQuantity) {
+    System.out.println("\n--- Restocking Medications to Set Level (" + targetQuantity + ") ---");
+
+    for (Medication med : medications) {
+        med.setQuantityInStock(targetQuantity);
+        System.out.println(med.getName() + ": Set to " + targetQuantity);
+    }
+}
+
     // ---------- GETTERS ----------
 
     public List<Doctor> getDoctors() {
