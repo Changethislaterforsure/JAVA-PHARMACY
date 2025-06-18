@@ -70,6 +70,8 @@ system.printPrescriptionsByDoctor("Dr. Jones");
 
 // --- PATIENT PRESCRIPTION SUMMARY REPORT ---
 system.printPatientPrescriptionSummary("Sarah Lee");
+
+system.restockMedicationsToLevel(100);
     }
   
 }
