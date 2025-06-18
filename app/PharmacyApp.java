@@ -67,6 +67,9 @@ system.acceptPrescription("Dr. Jones", "Sarah Lee", "Tamoxifen");
 
 // Generate report
 system.printPrescriptionsByDoctor("Dr. Jones");
+
+// --- PATIENT PRESCRIPTION SUMMARY REPORT ---
+system.printPatientPrescriptionSummary("Sarah Lee");
     }
   
 }
