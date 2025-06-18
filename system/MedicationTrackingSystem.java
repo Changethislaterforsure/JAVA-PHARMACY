@@ -1,5 +1,6 @@
 package system;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -186,6 +187,34 @@ public void printPrescriptionsByDoctor(String doctorName) {
 
     if (!found) {
         System.out.println("No prescriptions found for that doctor.");
+    }
+}
+/**
+ * Prints a summary of prescriptions for a given patient from the past year.
+ *
+ * @param patientName the name of the patient
+ */
+public void printPatientPrescriptionSummary(String patientName) {
+    System.out.println("\n--- Prescription Summary for " + patientName + " (Past Year) ---");
+    Patient patient = searchPatientByName(patientName);
+
+    if (patient == null) {
+        System.out.println("Patient not found.");
+        return;
+    }
+
+    LocalDate oneYearAgo = LocalDate.now().minusYears(1);
+    boolean found = false;
+
+    for (Prescription p : prescriptions) {
+        if (p.getPatient().equals(patient) && p.getIssueDate().isAfter(oneYearAgo)) {
+            System.out.println("- " + p.getMedication().getName());
+            found = true;
+        }
+    }
+
+    if (!found) {
+        System.out.println("No prescriptions found in the past year.");
     }
 }
 
