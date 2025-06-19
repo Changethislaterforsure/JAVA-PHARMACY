@@ -1,27 +1,4 @@
-## 📁 Project File Structure (Plain Text)
-
-```plaintext
-JAVA-PHARMACY/
-├── app/
-│   └── PharmacyApp.java               # Entry point with main() method
-│
-├── docs/
-│   ├── dev_doc.md                     # Development documentation
-│   ├── user_doc.md                    # User-facing instructions
-│ 
-│
-├── models/
-│   ├── Person.java                    # Superclass for Doctor and Patient
-│   ├── Doctor.java                    # Includes specialization and patient list
-│   ├── Patient.java                   # Includes prescriptions and medications
-│   ├── Medication.java                # Drug details and expiry logic
-│   └── Prescription.java              # Links doctor, patient, and medication
-│
-├── system/
-│   └── MedicationTrackingSystem.java  # Controls system logic and data
-│
-├── .gitignore                         # Git exclusion rules
-└── README.md                          # GitHub readme
+yes
 
 --------------------------------------------------------------------------------------
 
@@ -109,3 +86,38 @@ This project uses Git, making use of commits and commit messages to keep an onli
 ## Compiling
 Since I have just compiled part of this project for the first time in order to test it I thought now would be a good time to check off that part of the documentation. To compile this project I ran javac */*.java inside the bash terminal, javac is the java compiler that rounds up the .java code and turns it into .class files that can actually be read. The */*.java part of my command is technically 2 parts, the first * tells my compiler to target all folders in my directory and *.java tells it to scoop all java files inside those folders. Now that .class files exist for my project I go back to my bash terminal and enter java app.PharmacyApp     which runs my app, which as of writing this adds a prescription to the system. 
 
+### Time dependences
+This project was made wholly using standard Java SE 8, no external frameworks or libraries are present, so the only requirements to compile are JDK 8 or higher and a command line interface. 
+
+
+## How to get the source code from github
+To get the source code from github open the terminal of the environment you intend to work in and enter 
+git clone https://github.com/Changethislaterforsure/JAVA-PHARMACY
+recompile as nessecary via instructions above. 
+
+--------
+
+## 📁 Project File Structure (Plain Text)
+
+```plaintext
+JAVA-PHARMACY/
+├── app/
+│   └── PharmacyApp.java               # Entry point with main() method
+│
+├── docs/
+│   ├── dev_doc.md                     # Development documentation
+│   ├── user_doc.md                    # User-facing instructions
+│ 
+│
+├── models/
+│   ├── Person.java                    # Superclass for Doctor and Patient
+│   ├── Doctor.java                    # Includes specialization and patient list
+│   ├── Patient.java                   # Includes prescriptions and medications
+│   ├── Medication.java                # Drug details and expiry logic
+│   └── Prescription.java              # Links doctor, patient, and medication
+│
+├── system/
+│   └── MedicationTrackingSystem.java  # Controls system logic and data
+│
+├── .gitignore                         # Git exclusion rules
+└── README.md                          # GitHub readme
