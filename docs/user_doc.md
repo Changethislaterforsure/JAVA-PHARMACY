@@ -33,7 +33,7 @@ Tis class represents a record that links together doctors, patients and medicati
 This is the controller class, it manages all of the operations and data which is why its quite big compared to our other classes. It grabs the list of doctors and patients, deletes information, edits information and collects it for query. It encapsulates all of the backend system logic.
 
 ### PharmacyApp
-This is the main class currently used to test the features of the program. It includes hardcoded data like the names of doctors as well as method calls to show off the functionality of the program. The use of a menu could change how this class is set up, being able to accept user input to determine a doctors name but for now I have just made them up myself.
+This is the main class currently used to test the features of the program. It includes hardcoded data like the names of doctors as well as method calls to show off the functionality of the program. The use of a menu could change how this class is set up, being able to accept user input to determine a doctors name but for now I have just made them up myself. This class also contains my expireMed method that forces a made up medication to expire to populate the expired medications report. 
 
 
 
