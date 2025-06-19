@@ -1,24 +1,27 @@
+## 📁 Project File Structure (Plain Text)
+
+```plaintext
 JAVA-PHARMACY/
 ├── app/
-│   └── PharmacyApp.java             # Entry point with main() method
+│   └── PharmacyApp.java               # Entry point with main() method
 │
 ├── docs/
-│   ├── dev_doc.md                   # Development documentation
-│   ├── placeholder.md              # Placeholder file (safe to remove later)
-│   └── user_doc.md                  # User instructions
+│   ├── dev_doc.md                     # Development documentation
+│   ├── user_doc.md                    # User-facing instructions
+│ 
 │
-├── models/                          # Core entity models
-│   ├── Doctor.java
-│   ├── Medication.java
-│   ├── Patient.java
-│   ├── Person.java
-│   └── Prescription.java
+├── models/
+│   ├── Person.java                    # Superclass for Doctor and Patient
+│   ├── Doctor.java                    # Includes specialization and patient list
+│   ├── Patient.java                   # Includes prescriptions and medications
+│   ├── Medication.java                # Drug details and expiry logic
+│   └── Prescription.java              # Links doctor, patient, and medication
 │
 ├── system/
-│   └── MedicationTrackingSystem.java  # Manages system-wide logic and data
+│   └── MedicationTrackingSystem.java  # Controls system logic and data
 │
-├── .gitignore
-└── README.md                         # Project overview for GitHub
+├── .gitignore                         # Git exclusion rules
+└── README.md                          # GitHub readme
 
 --------------------------------------------------------------------------------------
 
